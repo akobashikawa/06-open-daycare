@@ -45,3 +45,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - /spec : Para crear las especificaciones
 - /spec-impl : Para implementar las especificaciones
+
+## Agents
+
+- spec-verifier: Verificador de criterios de aceptación de specs.
