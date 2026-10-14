@@ -1,7 +1,7 @@
 ---
 description: Verificador de criterios de aceptación de specs.
 mode: subagent
-model: aliyun/qwen-plus
+model: auto/best-free
 permission:
   bash: allow
   edit: allow
