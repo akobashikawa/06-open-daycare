@@ -1,6 +1,6 @@
 # SPEC 03 — Perfil del niño (/kids/:kid_id)
 
-> **Estado:** Approved
+> **Estado:** Implementado
 > **Depende de:** SPEC 02
 > **Fecha:** 2026-10-14
 > **Objetivo:** Implementar la pantalla de perfil individual de un niño en /kids/:kid_id mostrando foto, datos, alergias, padres vinculados y botón de resumen del día, siguiendo el diseño perfil-nino.dc.html.

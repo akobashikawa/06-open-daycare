@@ -1,10 +1,11 @@
 import Link from "next/link";
+import type { Parent } from "@/app/data/kids";
 
 interface KidCardProps {
   id: number;
   name: string;
   age: string;
-  parents: string[];
+  parents: Parent[];
   status: string | null;
 }
 
