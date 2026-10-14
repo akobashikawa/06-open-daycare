@@ -1,6 +1,19 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
+  };
+
+  const activeClass = "bg-[#FBE3D8] text-[#D9583C] font-bold";
+  const inactiveClass = "bg-transparent text-[#6E6359] font-medium";
+
   return (
     <aside className="w-[248px] flex-none bg-[#FFFDF9] border-r border-[#ECE0D0] flex flex-col px-4 py-6 sticky top-0 h-screen overflow-hidden">
       <Link href="/" className="flex items-center gap-3 px-2 py-1 mb-5">
@@ -24,13 +37,13 @@ export default function Sidebar() {
       </Link>
 
       <nav className="flex flex-col gap-1 flex-1 mt-1">
-        <Link href="/" className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-[#FBE3D8] text-[#D9583C] font-bold text-sm">
+        <Link href="/" className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm ${isActive("/") ? activeClass : inactiveClass}`}>
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />
           </svg>
           Feed
         </Link>
-        <Link href="/ninos" className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-transparent text-[#6E6359] font-medium text-sm">
+        <Link href="/ninos" className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm ${isActive("/ninos") ? activeClass : inactiveClass}`}>
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="7" r="3" />
             <circle cx="17" cy="9" r="2.4" />
@@ -38,13 +51,13 @@ export default function Sidebar() {
           </svg>
           Niños
         </Link>
-        <Link href="/avisos" className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-transparent text-[#6E6359] font-medium text-sm">
+        <Link href="/avisos" className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm ${isActive("/avisos") ? activeClass : inactiveClass}`}>
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0" />
           </svg>
           Avisos
         </Link>
-        <Link href="/mi-cuenta" className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-transparent text-[#6E6359] font-medium text-sm">
+        <Link href="/mi-cuenta" className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm ${isActive("/mi-cuenta") ? activeClass : inactiveClass}`}>
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
             <circle cx="12" cy="7" r="4" />
