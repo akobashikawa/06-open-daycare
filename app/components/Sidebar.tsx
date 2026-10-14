@@ -43,7 +43,7 @@ export default function Sidebar() {
           </svg>
           Feed
         </Link>
-        <Link href="/ninos" className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm ${isActive("/ninos") ? activeClass : inactiveClass}`}>
+        <Link href="/kids" className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm ${isActive("/kids") ? activeClass : inactiveClass}`}>
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="7" r="3" />
             <circle cx="17" cy="9" r="2.4" />

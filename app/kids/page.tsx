@@ -14,7 +14,7 @@ export default function KidsPage() {
               <div className="text-xs font-extrabold tracking-[0.8px] text-[#D9583C] mb-1">GESTIÓN</div>
               <h1 className="font-fredoka font-semibold text-3xl text-[#3F362E] m-0">Niños</h1>
             </div>
-            <a href="/crear-nino" className="flex items-center gap-2 px-[18px] py-3 rounded-2xl bg-gradient-to-b from-[#F4977E] to-[#EE8164] text-white font-bold text-sm shadow-sm shadow-[#EE8164]/30">
+            <a href="/add-kid" className="flex items-center gap-2 px-[18px] py-3 rounded-2xl bg-gradient-to-b from-[#F4977E] to-[#EE8164] text-white font-bold text-sm shadow-sm shadow-[#EE8164]/30">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 5v14M5 12h14" />
               </svg>

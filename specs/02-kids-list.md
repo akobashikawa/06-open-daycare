@@ -1,6 +1,6 @@
 # SPEC 02 — Lista de niños (/kids)
 
-> **Estado:** Approved
+> **Estado:** Implemented
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-10-14
 > **Objetivo:** Implementar la pantalla /kids que muestra la cuadrícula de tarjetas de niños con búsqueda, filtro y-sidebar activo, siguiendo el diseño ninos.dc.html.
