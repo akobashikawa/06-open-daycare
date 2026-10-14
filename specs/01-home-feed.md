@@ -1,6 +1,6 @@
 # SPEC 01 — Implementación del Feed de inicio (Home)
 
-> **Estado:** Approved
+> **Estado:** Implemented
 > **Depende de:** Ninguno
 > **Fecha:** 2026-10-13
 > **Objetivo:** Implementar la pantalla principal (home /) del feed de la guardería siguiendo la plantilla de diseño feed.dc.html, con navegación funcional y placeholders.
