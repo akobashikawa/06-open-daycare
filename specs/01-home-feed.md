@@ -34,10 +34,10 @@ Este spec utiliza datos hardcodeados para el feed, por lo que no introduce nueva
 
 ## Criterios de aceptación
 
-- [ ] La aplicación carga en `http://localhost:3000` con el fondo y fuentes correctas.
-- [ ] El sidebar muestra la navegación y enlaces a placeholders.
-- [ ] El feed muestra los 3 posts definidos con sus respectivos diseños y badges.
-- [ ] Todos los enlaces del sidebar utilizan `next/link` y apuntan a rutas de la aplicación (placeholders).
+- [x] La aplicación carga en `http://localhost:3000` con el fondo y fuentes correctas.
+- [x] El sidebar muestra la navegación y enlaces a placeholders.
+- [x] El feed muestra los 3 posts definidos con sus respectivos diseños y badges.
+- [x] Todos los enlaces del sidebar utilizan `next/link` y apuntan a rutas de la aplicación (placeholders).
 
 ## Decisiones
 
