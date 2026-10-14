@@ -1,7 +1,7 @@
 ---
 description: Verificador de criterios de aceptación de specs.
 mode: subagent
-model: auto/best-free
+model: oc/big-pickle
 permission:
   bash: allow
   edit: allow
