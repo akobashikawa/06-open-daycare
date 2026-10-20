@@ -1,6 +1,6 @@
 # SPEC 04 — Pantallas de login y activación de cuenta (/login y /activate)
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-10-20
 > **Objetivo:** Implementar las pantallas `/login` y `/activate` según los diseños `login.dc.html` y `activar-cuenta.dc.html`, con formularios navegables y sin autenticación real.
