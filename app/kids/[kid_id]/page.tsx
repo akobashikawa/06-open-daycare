@@ -3,6 +3,10 @@ import Sidebar from "@/app/components/Sidebar";
 import { kids } from "@/app/data/kids";
 import Link from "next/link";
 
+// Cache Components: esta página depende de `params` en runtime.
+// Se permite bloquear el prerender para que `next build` no falle.
+export const instant = false;
+
 // Next.js 16: params is Promise; must await before parseInt.
 export default async function KidProfilePage({ params }: { params: Promise<{ kid_id: string }> }) {
   const { kid_id } = await params;

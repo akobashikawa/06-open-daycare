@@ -1,6 +1,6 @@
 # SPEC 05 — Pantalla de alta de niño (/kids/new)
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 02, SPEC 03
 > **Fecha:** 2026-10-20
 > **Objetivo:** Implementar la pantalla `/kids/new` con el formulario de alta de niño del diseño `agregar-nino.dc.html`, con validación HTML nativa y sin persistencia.
@@ -66,22 +66,22 @@ Los valores del formulario no se envían a ningún lado. Al hacer submit se desc
 
 ## Criterios de aceptación
 
-- [ ] `/kids/new` muestra una tarjeta centrada de 520 px sobre fondo `#F6ECDF`.
-- [ ] `/kids/new` no renderiza el `Sidebar`.
-- [ ] El header muestra "Cancelar", "Agregar niño" y "Guardar" con la disposición y colores de `agregar-nino.dc.html`.
-- [ ] "Cancelar" navega a `/kids`.
-- [ ] El campo nombre tiene placeholder "Ej. Martina López" y es obligatorio.
-- [ ] El campo fecha de nacimiento usa `input type="date"` y es obligatorio.
-- [ ] El selector de sala muestra `Soles` como única opción y está seleccionado por defecto.
-- [ ] El campo de alergias es opcional, acepta texto con comas y muestra el placeholder "Ej. Maní, Lactosa".
-- [ ] El campo de notas médicas es un `textarea` opcional con el placeholder del diseño.
-- [ ] Enviar el formulario con nombre o fecha vacíos no navega.
-- [ ] Enviar el formulario con nombre y fecha válidos navega a `/kids`.
-- [ ] El botón "Agregar niño" de `/kids` navega a `/kids/new`.
-- [ ] A 390 px de ancho no aparece scroll horizontal y fecha y sala se ven en una columna.
-- [ ] Los campos muestran foco visible al navegar con teclado.
-- [ ] La pestaña muestra "Agregar niño — OpenDayCare".
-- [ ] `npm run build` termina sin errores.
+- [x] `/kids/new` muestra una tarjeta centrada de 520 px sobre fondo `#F6ECDF`.
+- [x] `/kids/new` no renderiza el `Sidebar`.
+- [x] El header muestra "Cancelar", "Agregar niño" y "Guardar" con la disposición y colores de `agregar-nino.dc.html`.
+- [x] "Cancelar" navega a `/kids`.
+- [x] El campo nombre tiene placeholder "Ej. Martina López" y es obligatorio.
+- [x] El campo fecha de nacimiento usa `input type="date"` y es obligatorio.
+- [x] El selector de sala muestra `Soles` como única opción y está seleccionado por defecto.
+- [x] El campo de alergias es opcional, acepta texto con comas y muestra el placeholder "Ej. Maní, Lactosa".
+- [x] El campo de notas médicas es un `textarea` opcional con el placeholder del diseño.
+- [x] Enviar el formulario con nombre o fecha vacíos no navega.
+- [x] Enviar el formulario con nombre y fecha válidos navega a `/kids`.
+- [x] El botón "Agregar niño" de `/kids` navega a `/kids/new`.
+- [x] A 390 px de ancho no aparece scroll horizontal y fecha y sala se ven en una columna.
+- [x] Los campos muestran foco visible al navegar con teclado.
+- [x] La pestaña muestra "Agregar niño — OpenDayCare".
+- [x] `npm run build` termina sin errores.
 
 ## Decisiones tomadas y descartadas
 
@@ -94,6 +94,7 @@ Los valores del formulario no se envían a ningún lado. Al hacer submit se desc
 - **Sí:** alergias como texto libre separado por comas. Es lo más simple y fiel al input del diseño; las chips quedan para otro spec.
 - **Sí:** `input type="date"`. Evita formatos inválidos sin escribir validación propia.
 - **Sí:** reutilizar la paleta y las fuentes ya configuradas en `app/layout.tsx`. No se toca el layout global.
+- **Sí:** `export const instant = false` en `app/kids/[kid_id]/page.tsx` para desbloquear el build preexistente de SPEC 03. Fue un fix puntual aprobado durante la verificación; no cambia el comportamiento del perfil.
 - **No:** `POST /api/kids`. No hay backend ni persistencia en el proyecto; agregarlo excede este spec.
 - **No:** chips interactivos de alergias. Requieren estado extra y no cambian el resultado de este spec.
 - **No:** validar que la fecha sea pasada. El diseño no lo pide; se puede sumar en un spec de validación.
