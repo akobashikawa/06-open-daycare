@@ -11,9 +11,10 @@ export default function LoginPage() {
       style={{
         minHeight: "100vh",
         display: "grid",
-        gridTemplateColumns: "1.05fr 1fr",
         background: "#FBF4EC",
+        gridTemplateColumns: "1fr",
       }}
+      className="lg:grid-cols-[1.05fr_1fr]"
     >
       {/* Panel izquierdo — marca */}
       <div
@@ -28,6 +29,7 @@ export default function LoginPage() {
           padding: "56px 60px",
           color: "#fff",
         }}
+        className="hidden lg:flex"
       >
         <div
           style={{
