@@ -12,9 +12,8 @@ export default function LoginPage() {
         minHeight: "100vh",
         display: "grid",
         background: "#FBF4EC",
-        gridTemplateColumns: "1fr",
       }}
-      className="lg:grid-cols-[1.05fr_1fr]"
+      className="grid-cols-1 lg:grid-cols-[1.05fr_1fr]"
     >
       {/* Panel izquierdo — marca */}
       <div
